@@ -88,8 +88,11 @@ Inference Latency Comparison (per sample)
 | LightGBM Ranker       | 0.00096      |
 | XGBoost DART Ranker   | 0.00292      |
 
-- Code modularized for pipeline scalability.
-- Trained models saved with `joblib` and easily reloadable.
+## Assumptions
+- Booking/click labels are used to define new ranking labels.
+- Negative and extreme values treated as data quality issues.
+- Models optimized for relative ranking performance, not absolute booking probability.
+- Detailed EDA and Assumptions document in `Assumptions and Exploratory Data Analysis (EDA).pdf`
 
 ## Setup & Installation
 ```bash
@@ -116,12 +119,6 @@ python main.py
 - User context and personalization not included.
 - Ranking is based on static snapshot — no time-series modeling.
 - No hyperparameter tuning yet (see Future Work)
-
-## Assumptions
-- Booking/click labels are used to define new ranking labels.
-- Negative and extreme values treated as data quality issues.
-- Models optimized for relative ranking performance, not absolute booking probability.
-- Detailed EDA and Assumptions document in `Assumptions and Exploratory Data Analysis (EDA).pdf`
 
 ## Future Work (System Improvements)
 - Hyperparameter tuning with Optuna or grid search.
