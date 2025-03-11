@@ -76,10 +76,6 @@ Displays the top contributing features to the best-performing model's decisions.
 Compares per-sample latency across different models for deployment feasibility.
 ![Inference Latency](visuals_and_results/inference_latency_comparison.png)
 
-### Ranking Difference Distribution
-Shows the distribution of differences between original rank and LTR-predicted rank.
-![Rank Difference](visuals_and_results/rank_comparison_table.png)
-
 
 ## Scalability & Deployment
 Inference Latency Comparison (per sample)
